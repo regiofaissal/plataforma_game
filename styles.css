@@ -1,0 +1,330 @@
+/* Estilos Globais */
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #ff00ff;
+    --background-dark: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-light: #ffffff;
+    --text-gray: #cccccc;
+    --neon-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: var(--neon-shadow);
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+/* Games Grid */
+.games-grid {
+    padding: 4rem 0;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--neon-shadow);
+}
+
+.game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.game-description {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.play-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+/* FAQ Section */
+.faq {
+    background: rgba(26, 26, 26, 0.5);
+    padding: 4rem 0;
+}
+
+.faq h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.faq-items {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(10px);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    color: var(--text-gray);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--neon-shadow);
+}
+
+.modal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+    color: var(--secondary-color);
+}
+
+.modal-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-shadow: var(--neon-shadow);
+}
+
+.modal-content {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: var(--background-dark);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer p {
+    color: var(--text-gray);
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.pagination-button {
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    box-shadow: var(--neon-shadow);
+    transform: scale(1.1);
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--text-gray);
+    color: var(--text-gray);
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-number {
+    background: var(--card-bg);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-number:hover:not(.active) {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.page-number.active {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    box-shadow: var(--neon-shadow);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    .games-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .game-card {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .page-numbers {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .pagination-button {
+        order: 1;
+    }
+}

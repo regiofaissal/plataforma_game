@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quebra-Cabeça Neon - Jogue Agora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" href="../../favicon.png" type="image/x-icon">
+    <style>
+        .game-container {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--background-dark);
+        }
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: var(--neon-shadow);
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: var(--background-dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--neon-shadow);
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-button">Voltar</a>
+    <div class="game-container">
+        <div class="game-content">
+            <iframe src="https://regiofaissal.github.io/mascote_virtual/" style="width: 600px; height: 600px; margin-top: 75px;" frameborder="0" allow="gamepad *;"></iframe>
+        </div>
+    </div>
+</body>
+</html>
